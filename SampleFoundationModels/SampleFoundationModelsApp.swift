@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SampleFoundationModelsApp: App {
+    
+    @State private var smartController = SmartController()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .environment(self.smartController)
     }
 }
